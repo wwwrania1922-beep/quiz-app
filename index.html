@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMe — JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-card">
+
+    <!-- ============ HEADER (progress) ============ -->
+    <div class="quiz-header">
+      <span id="question-number">Question 1 of 5</span>
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- ============ QUESTION SCREEN ============ -->
+    <!-- This whole section is hidden/shown by JS depending on quiz state -->
+    <div id="question-screen">
+      <h2 id="question-text">Question text goes here</h2>
+
+      <!-- JavaScript fills this with 4 <button> options for every question -->
+      <div id="options-container" class="options-container"></div>
+
+      <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+    </div>
+
+    <!-- ============ RESULT SCREEN ============ -->
+    <!-- Hidden by default (see style.css) — shown only after the last question -->
+    <div id="result-screen" class="result-screen">
+      <h2>Quiz complete!</h2>
+      <p class="score-text">You scored</p>
+      <p id="score-value" class="score-value">0 / 5</p>
+      <p id="score-message" class="score-message"></p>
+      <button id="restart-btn" class="btn btn-primary">Try again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
